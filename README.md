@@ -1,4 +1,4 @@
-# Plant_Project_Public
+# IoT
 IoT in home
 
 Hardware used in this project: 
