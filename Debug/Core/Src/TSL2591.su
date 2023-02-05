@@ -1,0 +1,15 @@
+../Core/Src/TSL2591.c:22:14:TSL2591_Read_Byte	16	static
+../Core/Src/TSL2591.c:34:14:TSL2591_Read_Word	16	static
+../Core/Src/TSL2591.c:47:13:TSL2591_Write_Byte	16	static
+../Core/Src/TSL2591.c:58:6:TSL2591_Enable	8	static
+../Core/Src/TSL2591.c:69:6:TSL2591_Disable	8	static
+../Core/Src/TSL2591.c:80:7:TSL2591_Get_Gain	16	static
+../Core/Src/TSL2591.c:99:6:TSL2591_Set_Gain	24	static
+../Core/Src/TSL2591.c:119:7:TSL2591_Get_IntegralTime	16	static
+../Core/Src/TSL2591.c:140:6:TSL2591_Set_IntegralTime	24	static
+../Core/Src/TSL2591.c:159:7:TSL2591_Read_Channel0	8	static
+../Core/Src/TSL2591.c:164:7:TSL2591_Read_Channel1	8	static
+../Core/Src/TSL2591.c:174:7:TSL2591_Init	8	static
+../Core/Src/TSL2591.c:191:7:TSL2591_Read_Lux	48	static
+../Core/Src/TSL2591.c:266:6:TSL2591_SET_InterruptThreshold	16	static
+../Core/Src/TSL2591.c:291:6:TSL2591_SET_LuxInterrupt	48	static
