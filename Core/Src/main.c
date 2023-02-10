@@ -46,10 +46,14 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t message[20];
+int message[20];
+int TemperatureInt = 0;
 uint16_t sizeOfMessage = 4;
 uint16_t value = 0;
 float counter = 0.0;
+uint8_t buf[5];
+uint8_t TempReg = 0x05;
+float temp_val;
 
 /* USER CODE END PV */
 
@@ -98,19 +102,16 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim10);
-  sprintf(message, "test");
-  HAL_UART_Transmit_IT(&huart1, &message, sizeOfMessage); //sending one byte
-
   DEV_ModuleInit();
-
   TSL2591_Init();
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -169,10 +170,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim -> Instance == TIM10) {
 		//HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-		HAL_UART_Transmit_IT(&huart1, &message, sizeOfMessage); //sending one byte
+		HAL_I2C_Master_Transmit(&hi2c1, (0x18 << 1), &TempReg, 1, HAL_MAX_DELAY);
+		HAL_I2C_Master_Receive(&hi2c1, (0x18 << 1), &buf[0], 2, HAL_MAX_DELAY);
+		temp_val = (uint8_t)(buf[0] << 4) + buf[1] / 16.0;
+		TemperatureInt = temp_val * 1000;
+		sprintf(message, "%d ", TemperatureInt);
+
+		HAL_UART_Transmit_IT(&huart1, message, sizeof(message)); //sending one byte
 	}
-
-
 }
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
