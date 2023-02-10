@@ -35,5 +35,6 @@ Provided functionalities - Measurement of ambient temperature (°C)
 
 Integration temperature sensor with the stm board. 
 
-![unnamed](https://user-images.githubusercontent.com/84154206/218198800-f5e6de29-0b36-447c-8d13-b4df218c3bfc.jpg)
+![image](https://user-images.githubusercontent.com/84154206/218199155-60ce0896-1819-4822-b9ea-5ccf3bed3dd8.png)
 
+![unnamed](https://user-images.githubusercontent.com/84154206/218198800-f5e6de29-0b36-447c-8d13-b4df218c3bfc.jpg)
