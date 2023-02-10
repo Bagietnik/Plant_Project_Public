@@ -9,6 +9,8 @@ Boards:
 
 Sensors:
 - TSL2591X Light Sensor (Waveshare)
+- MCP9808 High Accuracy Digital Temperature Sensor (Adafruit)
+
 
 Software:
 - STM32CubeIDE 1.9.0
@@ -25,3 +27,13 @@ Serial port and timer configuration.
 
 
 ![unnamed](https://user-images.githubusercontent.com/84154206/216839682-d0876469-ee3a-4fdf-a583-380088680cda.jpg)
+
+
+10/02/2023 
+
+Provided functionalities - Measurement of ambient temperature (°C)
+
+Integration temperature sensor with the stm board. 
+
+![unnamed](https://user-images.githubusercontent.com/84154206/218198800-f5e6de29-0b36-447c-8d13-b4df218c3bfc.jpg)
+
