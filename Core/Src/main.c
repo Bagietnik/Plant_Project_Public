@@ -46,10 +46,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int message[20];
+int message_temp[10];
+int message_light[5];
 int TemperatureInt = 0;
 uint16_t sizeOfMessage = 4;
-uint16_t value = 0;
+int light_value = 0;
 float counter = 0.0;
 uint8_t buf[5];
 uint8_t TempReg = 0x05;
@@ -115,9 +116,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	value = TSL2591_Read_Lux();
-	counter = counter + 0.01;
-
+	light_value = TSL2591_Read_Lux();
 
   }
   /* USER CODE END 3 */
@@ -174,9 +173,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		HAL_I2C_Master_Receive(&hi2c1, (0x18 << 1), &buf[0], 2, HAL_MAX_DELAY);
 		temp_val = (uint8_t)(buf[0] << 4) + buf[1] / 16.0;
 		TemperatureInt = temp_val * 1000;
-		sprintf(message, "%d ", TemperatureInt);
+		sprintf(message_temp, "Temp = %d, Light = %d\n\r", TemperatureInt, light_value);
+		HAL_UART_Transmit_IT(&huart1, message_temp, sizeof(message_temp)); //sending one byte
 
-		HAL_UART_Transmit_IT(&huart1, message, sizeof(message)); //sending one byte
 	}
 }
 
@@ -185,6 +184,8 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 	if(huart -> Instance == USART1)
 	{
 		HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+
+
 	}
 }
 
