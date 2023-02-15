@@ -38,3 +38,12 @@ Integration temperature sensor with the stm board.
 ![image](https://user-images.githubusercontent.com/84154206/218199155-60ce0896-1819-4822-b9ea-5ccf3bed3dd8.png)
 
 ![unnamed](https://user-images.githubusercontent.com/84154206/218198800-f5e6de29-0b36-447c-8d13-b4df218c3bfc.jpg)
+
+
+15/02/2023
+
+Integration of both sensors. Uart communication (in the future with esp32)
+
+![Zrzut ekranu 2023-02-15 192750](https://user-images.githubusercontent.com/84154206/219119826-2942f6a7-7f91-4e13-99f4-dc41fda62361.png)
+
+![unnamed](https://user-images.githubusercontent.com/84154206/219119276-e000c37e-7a22-4e74-833a-98c097f67b7b.jpg)
