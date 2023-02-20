@@ -5,7 +5,8 @@ Hardware used in this project:
 
 Boards:
 - STM32 Nucleo-F411RE 
-- Arduino UNO
+- ESP32-DevKitC
+- Raspberry Pi 4B
 
 Sensors:
 - TSL2591X Light Sensor (Waveshare)
@@ -13,7 +14,9 @@ Sensors:
 
 
 Software:
-- STM32CubeIDE 1.9.0
+- STM32CubeIDE 1.9.0 (collecting data from sensors)
+- Node.js (Mqtt broker) 
+- Arduino IDE (ESP32 mqtt client)
 
 05/02/2023 
 
@@ -47,3 +50,15 @@ Integration of both sensors. Uart communication (in the future with esp32)
 ![Zrzut ekranu 2023-02-15 192750](https://user-images.githubusercontent.com/84154206/219119826-2942f6a7-7f91-4e13-99f4-dc41fda62361.png)
 
 ![unnamed](https://user-images.githubusercontent.com/84154206/219119276-e000c37e-7a22-4e74-833a-98c097f67b7b.jpg)
+
+
+20/02/2023
+
+Introduction of raspberrypi and esp32 module.
+A basic version of the mqtt (aedes) broker has been created. A connection between the broker and the customer has been established.
+
+Noticed messages (broker):
+
+![Zrzut ekranu 2023-02-20 221326](https://user-images.githubusercontent.com/84154206/220199305-6a624129-604e-46a3-aaa9-7c008d8f62ac.png)
+
+![unnamed (1)](https://user-images.githubusercontent.com/84154206/220198525-a4410d99-5e76-4c59-bc31-bbddfc88d96a.jpg)
