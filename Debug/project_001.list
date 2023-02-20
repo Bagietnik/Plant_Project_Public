@@ -3227,9 +3227,9 @@ void MX_USART1_UART_Init(void)
  80019a8:	4b11      	ldr	r3, [pc, #68]	; (80019f0 <MX_USART1_UART_Init+0x4c>)
  80019aa:	4a12      	ldr	r2, [pc, #72]	; (80019f4 <MX_USART1_UART_Init+0x50>)
  80019ac:	601a      	str	r2, [r3, #0]
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 9600;
  80019ae:	4b10      	ldr	r3, [pc, #64]	; (80019f0 <MX_USART1_UART_Init+0x4c>)
- 80019b0:	f44f 32e1 	mov.w	r2, #115200	; 0x1c200
+ 80019b0:	f44f 5216 	mov.w	r2, #9600	; 0x2580
  80019b4:	605a      	str	r2, [r3, #4]
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
  80019b6:	4b0e      	ldr	r3, [pc, #56]	; (80019f0 <MX_USART1_UART_Init+0x4c>)
