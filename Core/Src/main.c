@@ -46,16 +46,13 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int message_temp[10];
-int message_light[5];
-int TemperatureInt = 0;
-uint16_t sizeOfMessage = 4;
-int light_value = 0;
-float counter = 0.0;
-uint8_t buf[5];
+unsigned int TemperatureInt = 0;
+unsigned int light_value = 0;
 uint8_t TempReg = 0x05;
-float temp_val;
-
+float temp_val = 0.0;
+uint16_t size = 0;
+uint8_t buf[5] = {0};
+char message_temp[10] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -111,8 +108,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -173,8 +168,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		HAL_I2C_Master_Receive(&hi2c1, (0x18 << 1), &buf[0], 2, HAL_MAX_DELAY);
 		temp_val = (uint8_t)(buf[0] << 4) + buf[1] / 16.0;
 		TemperatureInt = temp_val * 1000;
-		sprintf(message_temp, "Temp = %d, Light = %d\n\r", TemperatureInt, light_value);
-		HAL_UART_Transmit_IT(&huart1, message_temp, sizeof(message_temp)); //sending one byte
+		size = sprintf(message_temp, "%d%d\n\r", TemperatureInt, light_value);
+		HAL_UART_Transmit_IT(&huart1, message_temp, size); //sending one byte
 
 	}
 }

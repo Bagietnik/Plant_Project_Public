@@ -4,8 +4,8 @@
 #include <Wire.h>
 #include <SPI.h>
 
-#define WIFI_SSID "Orange_Swiatlowod_3200"
-#define WIFI_PASSWORD "QgLgqMHs7SCLe4j9QU"
+#define WIFI_SSID ""
+#define WIFI_PASSWORD "" 
 #define MQTT_HOST IPAddress(192, 168, 1, 21)
 #define MQTT_PORT 1883
 #define MQTT_PUB_TEMP "esp/Temp"
