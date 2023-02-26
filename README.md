@@ -12,6 +12,9 @@ Sensors:
 - TSL2591X Light Sensor (Waveshare)
 - MCP9808 High Accuracy Digital Temperature Sensor (Adafruit)
 
+Smart Radiator Thermostat: Tuya GTZ03
+
+SONOFF Zigbee 3.0 USB Dongle Plus Gateway
 
 Software:
 - STM32CubeIDE 1.9.0 (collecting data from sensors)
@@ -55,6 +58,7 @@ Integration of both sensors. Uart communication (in the future with esp32)
 20/02/2023
 
 Introduction of raspberrypi and esp32 module.
+
 A basic version of the mqtt (aedes) broker has been created. A connection between the broker and the customer has been established.
 
 Noticed messages (broker):
@@ -62,3 +66,20 @@ Noticed messages (broker):
 ![Zrzut ekranu 2023-02-20 221326](https://user-images.githubusercontent.com/84154206/220199305-6a624129-604e-46a3-aaa9-7c008d8f62ac.png)
 
 ![unnamed (1)](https://user-images.githubusercontent.com/84154206/220198525-a4410d99-5e76-4c59-bc31-bbddfc88d96a.jpg)
+
+26/02/2023
+
+STM32 program update, MQTT communication optimization. 
+Implementation of Node-Red for easy monitoring the values collected.
+Preparation of power supply stations
+Installation of smart radiator thermostat (manual mode for now).
+
+
+![Zrzut ekranu 2023-02-26 192955](https://user-images.githubusercontent.com/84154206/221431377-480a491e-7002-4b58-b3c0-1a65899f0df1.png)
+
+![333883759_1252378475420803_261353424374356721_n](https://user-images.githubusercontent.com/84154206/221431371-252e17ec-e5bb-41d4-92e9-c06171662bcb.jpg)
+
+![333778958_208761118340138_614288927622025369_n](https://user-images.githubusercontent.com/84154206/221431388-abd058b3-66b9-4cec-98c1-6871b0881a96.jpg)
+
+
+
