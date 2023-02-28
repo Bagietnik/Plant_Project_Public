@@ -82,4 +82,15 @@ Installation of smart radiator thermostat (manual mode for now).
 ![333778958_208761118340138_614288927622025369_n](https://user-images.githubusercontent.com/84154206/221431388-abd058b3-66b9-4cec-98c1-6871b0881a96.jpg)
 
 
+28/02/2023
+
+Communicaton with smart radiator thermostat (called "Valvy) was provided. 
+Now we are able to set values via mqtt.
+
+![Zrzut ekranu 2023-02-28 231904](https://user-images.githubusercontent.com/84154206/221994444-bbd0eb4d-b64f-44ef-a557-b779986b9e04.png)
+
+![Zrzut ekranu 2023-02-28 231853](https://user-images.githubusercontent.com/84154206/221994455-cc303f35-4bdb-407f-8e00-9af65497329c.png)
+
+![Zrzut ekranu 2023-02-28 231413](https://user-images.githubusercontent.com/84154206/221994183-dbbe1c1a-240d-402f-a7ea-87262ebd9abc.png)
+
 
