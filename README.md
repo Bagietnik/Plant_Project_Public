@@ -20,6 +20,7 @@ Software:
 - STM32CubeIDE 1.9.0 (collecting data from sensors)
 - Node.js (Mqtt broker) 
 - Arduino IDE (ESP32 mqtt client)
+- Zigbee2MQTT
 
 05/02/2023 
 
